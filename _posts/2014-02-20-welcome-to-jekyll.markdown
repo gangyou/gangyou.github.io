@@ -1,8 +1,10 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "Welcome to My World!"
 date:   2014-02-20 10:03:14
-categories: jekyll update
+categories: blog coding
+tags: Welcome Jekyll
+published: true
 ---
 
 You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!

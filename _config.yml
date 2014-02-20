@@ -1,5 +1,6 @@
 name: YG's Programming World
 markdown: redcarpet
+permalink: date
 pygments: true
 timezone: Asia/Shanghai
 safe: true

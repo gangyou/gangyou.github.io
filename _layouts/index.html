@@ -16,16 +16,22 @@
         <a href="/index.html" id="avatar"></a>
 
         <ul id="tags__ul">
-          <li id="js-label1" class="tags__li tags-btn active">All Posts</li>
-          <li id="js-label2" class="tags__li tags-btn">place_your_tag_display_name_here</li>
-          <li id="js-label3" class="tags__li tags-btn">place_your_tag_display_name_here</li>
-          <li id="js-label4" class="tags__li tags-btn">place_your_tag_display_name_here</li>
-          <li id="js-label5" class="tags__li tags-btn">place_your_tag_display_name_here</li>
-          <li id="js-label6" class="tags__li tags-btn">place_your_tag_display_name_here</li>
+          <li id="js-label1" class="tags__li tags-btn active">
+            文章
+          </li>
+          <li id="js-label2" class="tags__li tags-btn">
+            <a href="categories.html">分类</a>
+          </li>
+          <li id="js-label3" class="tags__li tags-btn"> 
+            标签
+          </li>
+          <li id="js-label4" class="tags__li tags-btn">
+            关于
+          </li>
         </ul>
 
         <div id="tags__bottom">
-          <a href="mailto:place_your_email_address_here" id="icon-email" class="tags-btn fontello"></a>
+          <a href="mailto:gangyou@gmail.com" id="icon-email" class="tags-btn fontello"></a>
           <a href="/rss.xml" id="icon-feed" class="tags-btn fontello"></a>
         </div>
       </nav> <!-- end #tags -->
@@ -39,7 +45,9 @@
 
         <nav id="pl__container">
         {% for post in site.posts %}
-          <a class="{{ post.categories }} pl__all" href="{{ post.url }}"><span class="pl__circle"></span><span class="pl__title">{{ post.title }}</span><span class="pl__date">{{ post.date | date: "%b %Y" }}</span></a>
+          <a class="{{ post.categories }} pl__all" href="{{ post.url }}">
+            <span class="pl__circle"></span>
+            <span class="pl__title">{{ post.title }}</span><span class="pl__date">{{ post.date | date: "%b %Y" }}</span></a>
         {% endfor %}
         </nav>
       </div> <!-- end #posts-list -->
