@@ -1,7 +1,8 @@
 name: YG's Programming World
-markdown: redcarpet
-permalink: date
+markdown: rdiscount
+permalink: /:year/:month/:day/:title.html
 pygments: true
 timezone: Asia/Shanghai
 safe: true
 encoding: UTF-8
+email: gangyou@gmail.com
