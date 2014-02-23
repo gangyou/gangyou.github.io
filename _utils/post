@@ -2,6 +2,7 @@
 
 import argparse
 from os import path
+from os import system
 from datetime import date
 from re import sub
 
@@ -21,6 +22,12 @@ def create_post_file(title):
     post.close()
     return post
 
+def open_with_mou(abspath):
+    code = system("open -a 'Mou' {}".format(abspath))
+    if code:
+        print "Open with Mou error"
+    return
+
 def main():
     parser = argparse.ArgumentParser()
 
@@ -32,6 +39,7 @@ def main():
         f = create_post_file(args.title)
         if f:
             print "Created: ", path.abspath(f.name)
+            open_with_mou(path.abspath(f.name))
             return
 
 if __name__ == '__main__':
