@@ -6,4 +6,4 @@ timezone: Asia/Shanghai
 safe: true
 encoding: UTF-8
 email: gangyou@gmail.com
-production_url: gangyou.github.io 
+production_url: http://gangyou.github.io 
