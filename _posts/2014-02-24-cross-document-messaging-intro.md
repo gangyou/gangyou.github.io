@@ -3,6 +3,7 @@ layout: post
 title: Cross Document Messaging 简介
 categories: HTML5, Javascript
 tags: HTML5, javascript, CDM, postMessage
+date: 2014-02-24 19:17:00 +0800
 ---
 
 上一篇文章 [CORS跨域资源共享介绍](2014/02/23/cors-introduction.html)，介绍了在现在浏览器中跨域Ajax的方法，本文记录下现代浏览器中的 **Cross Document Messaging API**，即跨文档通信API。
