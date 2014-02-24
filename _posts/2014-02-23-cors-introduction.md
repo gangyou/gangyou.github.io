@@ -1,6 +1,9 @@
 ---
 layout: post
 title: CORS 跨域资源共享介绍
+categories: Coding, Security
+tags: Web, Javascript, CORS, W3C
+description: CORS, Cross-Origin Resource Sharing 框架简介
 ---
 
 ### 吐槽部分
