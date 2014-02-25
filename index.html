@@ -5,8 +5,7 @@ path: index
 ---
 <h1>最新文章:</h1>
 <!-- 第一篇内容 start -->
-{% for post in site.posts %}
-{% if forloop.first %}
+{% assign post = site.posts[0] %}
 <article id="post__content">
   <h1 id="post__title" data-identifier="{{ post.date | date: "%Y%m%d" }}">{{ post.title }}</h1>
   {{ post.content | markdownify }}
@@ -33,6 +32,4 @@ var duoshuoQuery = {short_name:"yougang"};
 </script>
 <!-- Duoshuo Comment END -->
 <p id="copyright">Powered by <a href="http://jekyllrb.com" target="_blank">Jekyll</a>&nbsp;&nbsp;|&nbsp;&nbsp;Theme <a href="https://github.com/P233/3-Jekyll" target="_blank">3-Jekyll</a></p>
-{% endif %}
-{% endfor %}
 <!-- 第一篇内容 end -->
