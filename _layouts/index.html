@@ -3,11 +3,10 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <meta name="keywords" content="{{ page.tags | join: ',' }}"> 
+    <meta name="keywords" content="{{ page.tags | join: ',' }}">
     <meta name="description" content="{{ page.excerpt | escape }}">
     <title>{{ page.title }}</title>
     <!--[if lte IE 9]><meta http-equiv="refresh" content="0;url=/ie.html"><![endif]-->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="/css/syntax.css">
 
@@ -24,7 +23,7 @@
           <li id="js-label2" class="tags__li tags-btn {% if page.path == 'categories' %}active{% endif %}">
             <a href="/categories.html">分类</a>
           </li>
-          <li id="js-label3" class="tags__li tags-btn {% if page.path == 'tags' %}active{% endif %}"> 
+          <li id="js-label3" class="tags__li tags-btn {% if page.path == 'tags' %}active{% endif %}">
             <a href="/tags.html">标签</a>
           </li>
           <li id="js-label4" class="tags__li tags-btn {% if page.path == 'about' %}active{% endif %}">
