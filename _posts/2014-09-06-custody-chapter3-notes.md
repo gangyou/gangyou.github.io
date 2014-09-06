@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 商业银行资产托管业务学习笔记-第三章证券投资基金及其托管业务
+title: 商业银行资产托管业务学习笔记-第三章证券公司资产管理业务及其托管业务
 description: learning custody chapter 3 notes
 tags: [Banks]
 categories: [Work]
