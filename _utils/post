@@ -9,7 +9,6 @@ from re import sub
 DEFAULT_FORMAT_MATTER = '''---
 layout: post
 title: {}
-published: false
 ---
 '''
 
@@ -23,7 +22,7 @@ def create_post_file(title):
     return post
 
 def open_with_mou(abspath):
-    code = system("open -a 'Mou' {}".format(abspath))
+    code = system("sublime {}".format(abspath))
     if code:
         print "Open with Mou error"
     return
