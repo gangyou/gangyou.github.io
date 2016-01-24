@@ -144,8 +144,10 @@ SpEL的三元操作符主要是 ** if else then ** 操作符 `condition ? true s
 举一个例子
 
 ```
+{%highlight java%}
 String expressionStr1 = " name != null ? name : 'Default Value'";
 String expressionStr2 = "name ?: 'Default Value'";
+{% endhighlight %}
 ```
 
 上面的两个表达式都是先判断 `getName() `的返回值是不是null，如果是就返回`Default Value`，通过下面的Elvis操作符可以让代码更加的清晰。
@@ -155,7 +157,9 @@ String expressionStr2 = "name ?: 'Default Value'";
 同样借鉴自Groovy，在SpEL中引入了安全访问符**Safe Navigator Operator**——`.?`，解决了很大问题。相信每个Javaer都遇到过NullPointException的运行时异常，通常是对象还未实例化或者找不到对象，却访问对象属性造成的。通过安全访问符就可以避免这样的问题。
 
 ```
+{%highlight java%}
 String expStr = "thisMayBeNull.?property"
+{% endhighlight %}
 ```
 
 这句表达式在求值的时候，不会因为`thisMayBeNull`是Null值而抛出NullPointException，而是会简单的返回null。个人认为此处结合Elvis操作符，是一个很完善的处理方式。
@@ -165,8 +169,10 @@ String expStr = "thisMayBeNull.?property"
 同样借鉴自Groovy，SpEL提供了集合选择语法，如下面的例子：
 
 ```
+{%highlight java%}
 List<Inventor> list = (List<Inventor>) parser.parseExpression(
         "Members.?[Nationality == 'Serbian']").getValue(societyContext);
+{% endhighlight %}
 ```
 
 如果Members List不是Null，则在列表中选择`getNationality() == 'Serbian'`的对象集合返回。这个很类似于Java 8中的`stream and filter`方式，只是更加的简洁。
@@ -180,7 +186,7 @@ SpEL提供了Java的基础功能，也引入了3个借鉴自Groovy的特性语�
 比如下面的例子：
 
 ```
-
+{%highlight java%}
 public abstract class StringUtils {
 
     public static String reverseString(String input) {
@@ -202,6 +208,7 @@ public abstract class StringUtils {
             "#reverseString('hello')").getValue(context, String.class);
     }
 }
+{% endhighlight %}
 ```
 
 通过使用`StandardEvalutinContext.registerFunction`可以注册自定义的函数，唯一的一点要求就是需要在表达式中通过`#注册函数名`的方式引用函数。
